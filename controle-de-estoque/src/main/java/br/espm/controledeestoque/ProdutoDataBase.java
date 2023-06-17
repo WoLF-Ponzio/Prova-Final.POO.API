@@ -25,16 +25,16 @@ public class ProdutoDataBase {
     public ProdutoDataBase(Produto produto){
         this.idProduto = produto.getIdProduto();
         this.nomeProduto = produto.getNomeProduto();
-        this.quantidadeProduto = produto.getQuantidadeProduto();
         this.unidadeDeMedida = produto.getUnidadeDeMedida();
+        this.quantidadeProduto = produto.getQuantidadeProduto();
     }
 
-    public Produto newLiv() {
+    public Produto newProd() {
         return new Produto(
             this.idProduto,
             this.nomeProduto,
-            this.quantidadeProduto,
-            this.unidadeDeMedida
+            this.unidadeDeMedida,
+            this.quantidadeProduto
         );
     }
 

@@ -19,11 +19,11 @@ public class Produto {
 
     }
 
-    public Produto(String idProduto, String nomeProduto, double quantidadeProduto, String unidadeDeMedida){
+    public Produto(String idProduto, String nomeProduto, String unidadeDeMedida, double quantidadeProduto){
         this.idProduto = idProduto;
         this.nomeProduto = nomeProduto;
-        this.quantidadeProduto = quantidadeProduto;
         this.unidadeDeMedida = unidadeDeMedida;
+        this.quantidadeProduto = quantidadeProduto;
     }
 
     public String getIdProduto() {

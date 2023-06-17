@@ -23,8 +23,8 @@ USE `Estoque` ;
 CREATE TABLE IF NOT EXISTS `Estoque`.`Produto` (
   `idProduto` VARCHAR(100) NOT NULL,
   `nomeProduto` VARCHAR(150) NOT NULL,
-  `unidadeDeMedida` VARCHAR(10) NOT NULL,
   `quantidadeProduto` DOUBLE NOT NULL,
+  `unidadeDeMedida` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`idProduto`))
 ENGINE = InnoDB;
 
