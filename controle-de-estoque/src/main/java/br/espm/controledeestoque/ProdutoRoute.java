@@ -3,6 +3,7 @@ package br.espm.controledeestoque;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +23,6 @@ public class ProdutoRoute {
     @GetMapping("/produtos")
     public List<Produto> listarProdutos(){
     return produtoServices.listarProdutos();
-    
     }
 
     @PostMapping("/cadastrar-produto")
@@ -34,5 +34,10 @@ public class ProdutoRoute {
         public void atualizarProduto(@RequestBody Produto produto, @PathVariable String id){
             produtoServices.atualizarProduto(produto, id);
     }
+
+    @DeleteMapping("/deletar-produto/{id}")
+        public void deletarProduto(@PathVariable ("id") String id){
+            produtoServices.deletarProduto(id);
+        }
 
 }
