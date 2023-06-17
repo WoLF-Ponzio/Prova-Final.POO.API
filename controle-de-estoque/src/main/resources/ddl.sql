@@ -21,11 +21,13 @@ USE `Estoque` ;
 -- Table `mydb`.`Produto`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Estoque`.`Produto` (
-  `idProduto` VARCHAR(100) NOT NULL,
-  `nomeProduto` VARCHAR(150) NOT NULL,
-  `quantidadeProduto` DOUBLE NOT NULL,
-  `unidadeDeMedida` VARCHAR(10) NOT NULL,
-  PRIMARY KEY (`idProduto`))
+  `id_produto` VARCHAR(100) NOT NULL,
+  `nome_produto` VARCHAR(150) NOT NULL,
+  `marca_produto` VARCHAR(150),
+  `quantidade_produto` DOUBLE NOT NULL,
+  `unidade_de_medida` VARCHAR(10) NOT NULL,
+  `desc_produto` VARCHAR(300),
+  PRIMARY KEY (`id_produto`))
 ENGINE = InnoDB;
 
 

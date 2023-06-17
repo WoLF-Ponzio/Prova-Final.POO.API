@@ -1,5 +1,7 @@
 package br.espm.controledeestoque;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -10,20 +12,26 @@ public class Produto {
     private String idProduto;
     @JsonProperty("nomeProduto")
     private String nomeProduto;
+    @JsonProperty("marcaProduto")
+    private String marcaProduto;
     @JsonProperty("unidadeDeMedida")
     private String unidadeDeMedida;
     @JsonProperty("quantidadeProduto")
     private double quantidadeProduto;
+    @JsonProperty("descProduto")
+    private String descProduto;
 
     public Produto(){
 
     }
 
-    public Produto(String idProduto, String nomeProduto, String unidadeDeMedida, double quantidadeProduto){
+    public Produto(String idProduto, String nomeProduto, String marcaProduto, String unidadeDeMedida, double quantidadeProduto, String descProduto){
         this.idProduto = idProduto;
         this.nomeProduto = nomeProduto;
+        this.marcaProduto = marcaProduto;
         this.unidadeDeMedida = unidadeDeMedida;
         this.quantidadeProduto = quantidadeProduto;
+        this.descProduto = descProduto;
     }
 
     public String getIdProduto() {
@@ -34,6 +42,9 @@ public class Produto {
         return nomeProduto;
     }
 
+    public String getMarcaProduto() {
+        return marcaProduto;
+    }
 
     public double getQuantidadeProduto() {
         return quantidadeProduto;
@@ -41,6 +52,10 @@ public class Produto {
 
     public String getUnidadeDeMedida() {
         return unidadeDeMedida;
+    }
+
+    public String getDescProduto() {
+        return descProduto;
     }
 
     public void setIdProduto(String idProduto) {
@@ -51,12 +66,20 @@ public class Produto {
         this.nomeProduto = nomeProduto;
     }
 
+    public void setMarcaProduto(String marcaProduto) {
+        this.marcaProduto = marcaProduto;
+    }
+
     public void setQuantidadeProduto(double quantidadeProduto) {
         this.quantidadeProduto = quantidadeProduto;
     }
 
     public void setUnidadeDeMedida(String unidadeDeMedida) {
         this.unidadeDeMedida = unidadeDeMedida;
+    }
+
+    public void setDescProduto(String descProduto) {
+        this.descProduto = descProduto;
     }
 
 
