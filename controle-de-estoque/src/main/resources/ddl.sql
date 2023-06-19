@@ -24,9 +24,9 @@ CREATE TABLE IF NOT EXISTS `Estoque`.`Produto` (
   `id_produto` VARCHAR(100) NOT NULL,
   `nome_produto` VARCHAR(150) NOT NULL,
   `marca_produto` VARCHAR(150),
-  `quantidade_produto` DOUBLE NOT NULL,
   `unidade_de_medida` VARCHAR(10) NOT NULL,
-  `desc_produto` VARCHAR(300),
+  `quantidade_produto` DOUBLE NOT NULL,
+  `desc_produto` VARCHAR(500),
   PRIMARY KEY (`id_produto`))
 ENGINE = InnoDB;
 
@@ -34,3 +34,12 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- Insert Teste de alguns produtos/ingredientes
+insert into produto values ('54c3dc63-7ce6-4e9f-bfa4-61dd23c9a23a','Acem','','Kg',300,'');
+insert into produto values ('d82766e0-6b3c-4de6-8b33-e8797a82bbcb','Coca-Cola Normal 600ml','Coca-Cola','Unidade',200,'Garrafa de 600ml de coca');
+insert into produto values ('f8235549-4179-4a2e-b9aa-c4662b77e8c9','Feijão Carioca','Tio João','Kg',100,'');
+insert into produto values ('6cd187ae-1776-4014-9cff-c7579af22a73','Arroz','Tio João','Kg',100,'');
+insert into produto values ('7a379ca8-dcea-485f-91e5-d805135a441c','Farofa','Yoki','Kg',100,'');
+insert into produto values ('fc5368df-cd30-4b66-b966-951189b46ca4','Couve-Manteiga','','Kg',100,'');
+insert into produto values ('962507f0-9281-4264-ad11-b4e3b1fd0819','Torresmo','','Kg',100,'');
