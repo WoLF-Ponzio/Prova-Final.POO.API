@@ -25,6 +25,11 @@ public class ProdutoRoute {
     return produtoServices.listarProdutos();
     }
 
+    @GetMapping("/produtos/{id}")
+    public Produto getProduto(@PathVariable String id){
+        return produtoServices.geProduto(id);
+    }
+
     @PostMapping("/cadastrar-produto")
     public void cadastrarProduto(@RequestBody Produto produto ){
         produtoServices.cadastrarProduto(produto);
